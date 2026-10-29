@@ -1,13 +1,17 @@
 <script setup>
-import { ref } from 'vue';
-import { Scaling, CircleCheckBig, Van, Star, ChevronRight, ChevronLeft } from 'lucide-vue-next';
+import { Star, ChevronRight, ChevronLeft } from 'lucide-vue-next';
+import customerImage1 from '../assets/download (8)(1).jpg';
+import customerImage2 from '../assets/download (9).jpg';
+import customerImage3 from '../assets/download (10).jpg';
+import customerImage4 from '../assets/download (11).jpg';
+import heroProductImage from '../assets/Women Milley Pump -Beige.png';
 
-const imgs = ref([
-    { id: 1, img: '/src/assets/download (8)(1).jpg' },
-    { id: 2, img: '/src/assets/download (9).jpg' },
-    { id: 3, img: '/src/assets/download (10).jpg' },
-    { id: 4, img: '/src/assets/download (11).jpg' },
-])
+const imgs = [
+    { id: 1, img: customerImage1 },
+    { id: 2, img: customerImage2 },
+    { id: 3, img: customerImage3 },
+    { id: 4, img: customerImage4 },
+];
 </script>
 <template>
     <section class="p-5 pt-23">
@@ -31,7 +35,7 @@ const imgs = ref([
                 <div class="border border-black/10 p-4 rounded-lg bg-white 2xl:w-fit w-full">
                     <div class="flex items-center justify-between gap-2 mb-3">
                         <div v-for="imges in imgs" :key="imges.id">
-                            <img :src="imges.img" alt="" class="w-10 h-10 rounded-4xl">
+                            <img :src="imges.img" alt="Solei & Co customer" class="w-10 h-10 rounded-4xl">
                         </div>
                         <div
                             class="flex items-center justify-center text-white rounded-2xl bg-[#ff9c3a] w-20 border border-orange-200 ">
@@ -47,10 +51,10 @@ const imgs = ref([
                 </div>
             </div>
             <div class="relative w-fit flex items-center justify-center">
-                <img src="/src/assets/Women Milley Pump -Beige.png" alt="" class="2xl:h-140">
+                <img :src="heroProductImage" alt="Beige classic pump" class="2xl:h-140">
                 <div
                     class=" absolute flex items-center gap-3 right-0 p-2 rounded-lg 2xl:bottom-15 bottom-0 bg-white border border-black/10">
-                    <img class="h-20" src="/src/assets/Women Milley Pump -Beige.png" alt="">
+                    <img class="h-20" :src="heroProductImage" alt="Beige classic pump">
                     <div class="grid font-outfit text-sm gap-0.5 text-orange-950">
                         <h1 class="font-bold">Classic Pumps</h1>
                         <p>Stylish for both work and occasions.</p>
